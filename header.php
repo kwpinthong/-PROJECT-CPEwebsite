@@ -24,7 +24,7 @@
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
 					<a href="about.php" class="w3-bar-item w3-button">ABOUT</a>
-					<a href="news.php" class="w3-bar-item w3-button">NEWS</a>
+					<a href="news.html" class="w3-bar-item w3-button">NEWS</a>
 					<a href="contact.php" class="w3-bar-item w3-button">CONTACT</a>
 					<div class="w3-dropdown-hover">
 						<button class="w3-button">STUDENT</button>
@@ -82,25 +82,5 @@
 		function w3_close() {
 			mySidebar.style.display = "none";}
 			
-		// Slide Show
-		var slideIndex = 0;
-			howSlides();
-
-		function showSlides() {
-			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";  
-			}
-			slideIndex++;
-			if (slideIndex> slides.length) {slideIndex = 1}    
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			slides[slideIndex-1].style.display = "block";  
-			dots[slideIndex-1].className += " active";
-			setTimeout(showSlides, 5000); // Change image every 5 seconds
-		}
 	</script>
 	
