@@ -15,6 +15,7 @@
 		<link rel="shortcut icon" href="img/cpe_logo0.png" />
 		<title>Computer Engineering, Chiang Mai University</title>
 	</head>
+	
 	<body>
 		<!-- Navbar (sit on top) -->
 		<div class="w3-top">
@@ -81,5 +82,25 @@
 		function w3_close() {
 			mySidebar.style.display = "none";}
 			
+		// Slide Show
+		var slideIndex = 0;
+			howSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex> slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 5000); // Change image every 5 seconds
+		}
 	</script>
 	
