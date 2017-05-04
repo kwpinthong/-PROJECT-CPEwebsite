@@ -29,9 +29,10 @@
 					<div class="w3-dropdown-hover">
 						<button class="w3-button">STUDENT</button>
 						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
-							<a href="#" class="w3-bar-item w3-button">Link 7</a>
-							<a href="#" class="w3-bar-item w3-button">Link 8</a>
-							<a href="#" class="w3-bar-item w3-button">Link 9</a>
+							<a href="#" class="w3-bar-item w3-button">1st Year</a>
+							<a href="#" class="w3-bar-item w3-button">2nd Years</a>
+							<a href="#" class="w3-bar-item w3-button">3rd Years</a>
+							<a href="#" class="w3-bar-item w3-button">4th Years</a>
 						</div>
 					</div> 
 					<div class="w3-dropdown-hover">
@@ -52,10 +53,12 @@
 
 		<!-- Sidebar on small screens when clicking the menu icon -->
 		<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-			<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close Ã—</a>
 			<a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-			<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">1st Year</a>
+			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">2nd Years</a>
+			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">3rd Years</a>
+			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">4nd Years</a>
+			<a href="contact.php" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 		</nav>
 		
 	<script>
