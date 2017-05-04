@@ -26,14 +26,14 @@
 					<a href="about.php" class="w3-bar-item w3-button">ABOUT</a>
 					<a href="news.html" class="w3-bar-item w3-button">NEWS</a>
 					<a href="contact.php" class="w3-bar-item w3-button">CONTACT</a>
-					<a href="#teacher" class="w3-bar-item w3-button">TEACHERS</a>
+					<a href="teacher.php" class="w3-bar-item w3-button">TEACHERS</a>
 					<div class="w3-dropdown-hover ">
 						<button class="w3-button">STUDENT</button>
 						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
-							<a href="#" class="w3-bar-item w3-button">1st Year</a>
-							<a href="#" class="w3-bar-item w3-button">2nd Years</a>
-							<a href="#" class="w3-bar-item w3-button">3rd Years</a>
-							<a href="#" class="w3-bar-item w3-button">4th Years</a>
+							<a href="show1.php" class="w3-bar-item w3-button">1st Year</a>
+							<a href="show2.php" class="w3-bar-item w3-button">2nd Years</a>
+							<a href="show3.php" class="w3-bar-item w3-button">3rd Years</a>
+							<a href="show4.php" class="w3-bar-item w3-button">4th Years</a>
 						</div>
 					</div> 
 				</div>
@@ -49,14 +49,14 @@
 			<a href="about.php" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
 			<a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
 			<a href="contact.php" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-			<a href="contact.php" onclick="w3_close()" class="w3-bar-item w3-button">TEACHERS</a>
+			<a href="teacher.php" onclick="w3_close()" class="w3-bar-item w3-button">TEACHERS</a>
 			<div class="w3-dropdown-click">
 				<button onclick="myFunction()" class="w3-button">STUDENT</button>
 				<div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
-					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">1st Year</a>
-					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">2nd Years</a>
-					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">3rd Years</a>
-					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">4nd Years</a>
+					<a href="show1.php" onclick="w3_close()" class="w3-bar-item w3-button">1st Year</a>
+					<a href="show2.php" onclick="w3_close()" class="w3-bar-item w3-button">2nd Years</a>
+					<a href="show3.php" onclick="w3_close()" class="w3-bar-item w3-button">3rd Years</a>
+					<a href="show4.php" onclick="w3_close()" class="w3-bar-item w3-button">4nd Years</a>
 				</div>
 			</div>
 		</nav>
