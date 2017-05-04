@@ -1,10 +1,20 @@
 <html>
-	<title>W3.CSS Template</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-	<link rel="stylesheet" href="style.css" type="text/css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		
+		<!---Google Font--->
+		<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet"> 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+		
+		<!-----Form W3.CSS Template----->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<link rel="shortcut icon" href="img/cpe_logo0.png" />
+		<title>Computer Engineering, Chiang Mai University</title>
+	</head>
 	
 	<script>
 		// Script to open and close sidebar
