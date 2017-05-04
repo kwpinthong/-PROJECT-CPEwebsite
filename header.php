@@ -26,7 +26,8 @@
 					<a href="about.php" class="w3-bar-item w3-button">ABOUT</a>
 					<a href="news.html" class="w3-bar-item w3-button">NEWS</a>
 					<a href="contact.php" class="w3-bar-item w3-button">CONTACT</a>
-					<div class="w3-dropdown-hover">
+					<a href="#teacher" class="w3-bar-item w3-button">TEACHERS</a>
+					<div class="w3-dropdown-hover ">
 						<button class="w3-button">STUDENT</button>
 						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
 							<a href="#" class="w3-bar-item w3-button">1st Year</a>
@@ -35,14 +36,6 @@
 							<a href="#" class="w3-bar-item w3-button">4th Years</a>
 						</div>
 					</div> 
-					<div class="w3-dropdown-hover">
-						<button class="w3-button">TEAM</button>
-						<div class="w3-dropdown-content w3-bar-block w3-border" style="right:0">
-							<a href="#" class="w3-bar-item w3-button">Link 4</a>
-							<a href="#" class="w3-bar-item w3-button">Link 5</a>
-							<a href="#" class="w3-bar-item w3-button">Link 6</a>
-						</div>
-					</div>
 				</div>
 				<!-- Hide right-floated links on small screens and replace them with a menu icon -->
 				<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
@@ -53,12 +46,19 @@
 
 		<!-- Sidebar on small screens when clicking the menu icon -->
 		<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-			<a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">1st Year</a>
-			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">2nd Years</a>
-			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">3rd Years</a>
-			<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">4nd Years</a>
+			<a href="about.php" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+			<a href="news.html" onclick="w3_close()" class="w3-bar-item w3-button">NEWS</a>
 			<a href="contact.php" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+			<a href="contact.php" onclick="w3_close()" class="w3-bar-item w3-button">TEACHERS</a>
+			<div class="w3-dropdown-click">
+				<button onclick="myFunction()" class="w3-button">STUDENT</button>
+				<div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">1st Year</a>
+					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">2nd Years</a>
+					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">3rd Years</a>
+					<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">4nd Years</a>
+				</div>
+			</div>
 		</nav>
 		
 	<script>
@@ -84,6 +84,14 @@
 		// Close the sidebar with the close button
 		function w3_close() {
 			mySidebar.style.display = "none";}
-			
+
+		// Click Drop Down	
+		function myFunction() {
+			var x = document.getElementById("Demo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else { 
+				x.className = x.className.replace(" w3-show", "");}
+		}
 	</script>
 	
