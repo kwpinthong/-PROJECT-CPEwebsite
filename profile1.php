@@ -1,4 +1,20 @@
 <?php require_once("header2.php"); ?>
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "phpproject";
+	$conn = new mysqli($servername, $username, $password,$dbname);
+	mysqli_set_charset($conn, "utf8");
+
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
+
+	$sql = "SELECT * FROM studenttable where StudentID='".$_GET["ID"]."'";
+	$result = $conn->query($sql);
+?>
 
 	<body class="w3-light-grey w3-content" style="max-width:1600px">
 	<!-- Sidebar/menu -->
@@ -24,7 +40,7 @@
 				<form class="modal-content animate" action="/action_page.php">
 					<div class="container">
 						<label><b>Username</b></label>
-						<input type="text" placeholder="Enter Username" name="uname" required>	
+						<input type="text" placeholder="Enter Username" name="uname" required>
 						<label><b>Password</b></label>
 						<input type="password" placeholder="Enter Password" name="psw" required>
 						<button type="submit">Login</button>
@@ -35,29 +51,24 @@
 				</form>
 			</div>
 	</nav>
-	
+
 	<!-- Top menu on small screens -->
 	<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
 		<span class="w3-left w3-padding">STUDENT: 1st Year</span>
 		<a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 	</header>
-	
+
 	<!-- Overlay effect when opening sidebar on small screens -->
 	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 	<!-- !PAGE CONTENT! -->
-	
-	<!-------------------->
-	
-  
-		<!-- Footer -->
-		<footer class="w3-container w3-padding-32 w3-grey">  
-			<div class="w3-row-padding">
-			<button class="w3-button w3-block w3-blue" style="width:100%">ADD HERE</button></div>
-		</footer>
-  
-		<div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-		<!-- End page content -->
+	<div class="w3-main" style="margin-left:300px">
+		<!-- Push down content on small screens -->
+		<div class="w3-hide-large" style="margin-top:83px"></div>
+
+	<!--Show Profile-->
+
+
 	</div>
 
 	</body>

@@ -1,4 +1,20 @@
 <?php require_once("header2.php"); ?>
+<?php
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "phpproject";
+	$conn = new mysqli($servername, $username, $password,$dbname);
+	mysqli_set_charset($conn, "utf8");
+
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+	}
+
+	$sql = "SELECT * FROM studenttable where Years=4";
+	$result = $conn->query($sql);
+?>
 
 	<body class="w3-light-grey w3-content" style="max-width:1600px">
 	<!-- Sidebar/menu -->
@@ -24,9 +40,9 @@
 				<form class="modal-content animate" action="/action_page.php">
 					<div class="container">
 						<label><b>Username</b></label>
-						<input type="text" placeholder="Enter Username" name="uname" required>									
+						<input type="text" placeholder="Enter Username" name="uname" required>
 						<label><b>Password</b></label>
-						<input type="password" placeholder="Enter Password" name="psw" required>									
+						<input type="password" placeholder="Enter Password" name="psw" required>
 						<button type="submit">Login</button>
 					</div>
 					<div class="container" style="background-color:#f1f1f1">
@@ -35,73 +51,31 @@
 				</form>
 			</div>
 	</nav>
-	
+
 	<!-- Top menu on small screens -->
 	<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
 		<span class="w3-left w3-padding">STUDENT: 4th Years</span>
 		<a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 	</header>
-	
+
 	<!-- Overlay effect when opening sidebar on small screens -->
 	<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 	<!-- !PAGE CONTENT! -->
 	<div class="w3-main" style="margin-left:300px">
-		<!-- Push down content on small screens --> 
+		<!-- Push down content on small screens -->
 		<div class="w3-hide-large" style="margin-top:83px"></div>
-  
+
 		<!-- Photo grid -->
 		<div class="w3-row">
 			<ul class="w3-ul w3-margin-top" id="myUL">
-			<div class="w3-third">
-				<li><img src="img/bg/0.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature" id="0615"></li>
-				<li><img src="img/bg/1.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset" id="0616" ></li>
-				<li><img src="img/bg/2.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful" id="0617" ></li>
-			</div>
-
-			<div class="w3-third">
-				<li><img src="img/bg/3.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful" id="0618"></li>
-				<li><img src="img/bg/0.jpg" style="width:100%" onclick="onClick(this)" alt="Waiting for the bus in the desert" id="0619"></li>
-				<li><img src="img/bg/1.jpg" style="width:100%" onclick="onClick(this)" alt="Nature again.. At its finest!" id="0620"></li>
-			</div>
-    
-			<div class="w3-third">
-				<li><img src="img/bg/2.jpg" style="width:100%" onclick="onClick(this)" alt="Canoeing again" id="0621"></li>
-				<li><img src="img/bg/3.jpg" style="width:100%" onclick="onClick(this)" alt="A girl, and a train passing" id="0622"></li>
-				<li><img src="img/bg/0.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful day!" id="0623"></li>
-			</div></ul>
+				<?php while($row = $result->fetch_assoc()): ?>
+					<div class="w3-third">
+						<li><a href="profile1.php?ID=<?=$row["StudentID"]?>"><img src="img/student/<?=$row["Years"]?>/<?=$row["StudentID"]?>.jpg" onerror="this.src='img/student/defualt.jpg'" style="width:100%"></a></li>
+					</div>
+				<?php endwhile; ?>
+			</ul>
 		</div>
-
-		<!-- Pagination -->
-		<div class="w3-center w3-padding-32">
-			<div class="w3-bar">
-				<a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-				<a href="#" class="w3-bar-item w3-black w3-button">1</a>
-				<a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-				<a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-				<a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-				<a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
-			</div>
-		</div>
-  
-		<!-- Modal for full size images on click-->
-		<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-			<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-			<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-				<img id="img01" class="w3-image">
-				<p id="caption"></p>
-			</div>
-		</div>
-  
-		<!-- Footer -->
-		<footer class="w3-container w3-padding-32 w3-grey">  
-			<div class="w3-row-padding">
-			<button class="w3-button w3-block w3-blue" style="width:100%">ADD HERE</button></div>
-		</footer>
-  
-		<div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-		<!-- End page content -->
-	</div>
 
 	</body>
 </html>
