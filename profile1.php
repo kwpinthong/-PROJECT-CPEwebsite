@@ -14,6 +14,7 @@
 
 	$sql = "SELECT * FROM studenttable where StudentID='".$_GET["ID"]."'";
 	$result = $conn->query($sql);
+	$row = $result->fetch_assoc()
 ?>
 
 	<body class="w3-light-grey w3-content" style="max-width:1600px">
@@ -67,6 +68,7 @@
 		<div class="w3-hide-large" style="margin-top:83px"></div>
 
 	<!--Show Profile-->
+
 
 
 	</div>
