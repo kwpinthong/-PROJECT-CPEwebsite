@@ -20,7 +20,7 @@
 		<!-- Navbar (sit on top) -->
 		<div class="w3-top">
 			<div class="w3-bar w3-white w3-card-2" id="myNavbar">
-				<a href="index.php" class="w3-bar-item w3-button w3-wide"><!img src="img/cpe_logo2.jpg">HOME</a>
+				<a href="index.php" class="w3-bar-item w3-button w3-wide"><img src="img/cpe_logo2.jpg" style="width:50%"></a>
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
 					<a href="about.php" class="w3-bar-item w3-button">ABOUT</a>
