@@ -3,8 +3,8 @@
 	<!-- Header with full-height image -->
 	<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
 		<div class="w3-display-left w3-text-white" style="padding:48px">
-			<span class="w3-jumbo w3-hide-small">Computer Enginerring Faculty of Enginerring Chiang mai University.</span><br>
-			<span class="w3-xxlarge w3-hide-large w3-hide-medium">Computer Enginerring Faculty of Enginerring Chiang mai University.</span><br>
+			<span class="w3-jumbo w3-hide-small">Computer Engineering Faculty of Engineering Chiang mai University.</span><br>
+			<span class="w3-xxlarge w3-hide-large w3-hide-medium">Computer Engineering Faculty of Engineering Chiang mai University.</span><br>
 			<span class="w3-large">@ภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวะกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่</span>
 		</div> 
 		<div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
