@@ -20,7 +20,7 @@
 		<!-- Navbar (sit on top) -->
 		<div class="w3-top">
 			<div class="w3-bar w3-white w3-card-2" id="myNavbar">
-				<a href="index.php" class="w3-bar-item w3-button w3-wide"><!img src="img/cpe_logo2.jpg">HOME</a>
+				<a href="index.php" class="w3-bar-item w3-button w3-wide"><img src="img/cpe_logo2.jpg" style="width:50%"></a>
 				<!-- Right-sided navbar links -->
 				<div class="w3-right w3-hide-small">
 					<a href="about.php" class="w3-bar-item w3-button">ABOUT</a>
@@ -38,12 +38,12 @@
 					</div> 		
 					<a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button" style="width:auto;">LOGIN</a>
 						<div id="id01" class="modal">
-							<form class="modal-content animate" action="/action_page.php">
+							<form class="modal-content animate" action="check_login.php">
 								<div class="container">
 									<label><b>Username</b></label>
-									<input type="text" placeholder="Enter Username" name="uname" required>	
+									<input type="text" placeholder="Enter Username" name="username" required>	
 									<label><b>Password</b></label>
-									<input type="password" placeholder="Enter Password" name="psw" required>
+									<input type="password" placeholder="Enter Password" name="password" required>
 									<button type="submit">Login</button>
 								</div>
 								<div class="container" style="background-color:#f1f1f1">
