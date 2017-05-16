@@ -19,8 +19,24 @@
 					<a href="show4.php" onclick="w3_close()" class="w3-bar-item w3-button">4th Years</a>
 				</div>
 			</div>
+			
 	</nav>
-	
+	<a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button" style="width:auto;">LOGIN</a>
+			<div id="id01" class="modal">
+				<form class="modal-content animate" action="/action_page.php">
+					<div class="container">
+						<label><b>Username</b></label>
+						<input type="text" placeholder="Enter Username" name="uname" required>
+						<label><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
+						<button type="submit">Login</button>
+					</div>
+					<div class="container" style="background-color:#f1f1f1">
+						<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+					</div>
+				</form>
+			</div>
+	</nav>
 	<!-- Top menu on small screens -->
 	<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
 		<span class="w3-left w3-padding">TEACHERS</span>
