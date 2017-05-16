@@ -22,7 +22,7 @@
 		
 	<!-- Contact Section -->
 	<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-		<h3 class="w3-center">CONTACT</h3>
+		<h3 class="w3-center">CONTACT US</h3>
 		<p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
 		<div class="w3-row-padding" style="margin-top:64px">
 			<div class="w3-half">
