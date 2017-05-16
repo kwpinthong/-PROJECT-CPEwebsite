@@ -38,12 +38,12 @@
 					</div> 		
 					<a onclick="document.getElementById('id01').style.display='block'" class="w3-bar-item w3-button" style="width:auto;">LOGIN</a>
 						<div id="id01" class="modal">
-							<form class="modal-content animate" action="/action_page.php">
+							<form class="modal-content animate" action="check_login.php">
 								<div class="container">
 									<label><b>Username</b></label>
-									<input type="text" placeholder="Enter Username" name="uname" required>	
+									<input type="text" placeholder="Enter Username" name="username" required>	
 									<label><b>Password</b></label>
-									<input type="password" placeholder="Enter Password" name="psw" required>
+									<input type="password" placeholder="Enter Password" name="password" required>
 									<button type="submit">Login</button>
 								</div>
 								<div class="container" style="background-color:#f1f1f1">
