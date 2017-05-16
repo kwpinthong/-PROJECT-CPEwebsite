@@ -41,9 +41,9 @@
 							<form class="modal-content animate" action="/action_page.php">
 								<div class="container">
 									<label><b>Username</b></label>
-									<input type="text" placeholder="Enter Username" name="uname" required>									
+									<input type="text" placeholder="Enter Username" name="uname" required>	
 									<label><b>Password</b></label>
-									<input type="password" placeholder="Enter Password" name="psw" required>									
+									<input type="password" placeholder="Enter Password" name="psw" required>
 									<button type="submit">Login</button>
 								</div>
 								<div class="container" style="background-color:#f1f1f1">
@@ -74,6 +74,7 @@
 					<a href="show4.php" onclick="w3_close()" class="w3-bar-item w3-button">4nd Years</a>
 				</div>
 			</div>
+			<a href="login.php" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
 		</nav>
 		
 	<script>

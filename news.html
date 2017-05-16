@@ -74,6 +74,7 @@
 					<a href="show4.php" onclick="w3_close()" class="w3-bar-item w3-button">4nd Years</a>
 				</div>
 			</div>
+			<a href="login.php" onclick="w3_close()" class="w3-bar-item w3-button">LOGIN</a>
 		</nav>
 		
 		<!-- Header with full-height image -->
@@ -124,16 +125,49 @@
 				dots[slideIndex-1].className += " active";
 				setTimeout(showSlides, 2000); // Change image every 2 seconds
 			}
-			
+	
+			// Modal Image Gallery
+			function onClick(element) {
+				document.getElementById("img01").src = element.src;
+				document.getElementById("modal01").style.display = "block";
+				var captionText = document.getElementById("caption");
+				captionText.innerHTML = element.alt;
+			}
+
+			// Toggle between showing and hiding the sidebar when clicking the menu icon
+			var mySidebar = document.getElementById("mySidebar");
+	
+			function w3_open(){
+				if (mySidebar.style.display === 'block') {
+					mySidebar.style.display = 'none';
+				}else{
+					mySidebar.style.display = 'block';
+				}
+			}
+
+			// Close the sidebar with the close button
+			function w3_close() {
+				mySidebar.style.display = "none";}
+
+			// Click Drop Down	
+			function myFunction() {
+				var x = document.getElementById("Demo");
+				if (x.className.indexOf("w3-show") == -1) {
+					x.className += " w3-show";
+				} else { 
+					x.className = x.className.replace(" w3-show", "");}
+			}
+		
 			// Get the modal
 			var modal = document.getElementById('id01');
 
 			// When the user clicks anywhere outside of the modal, close it
 			window.onclick = function(event) {
 				if (event.target == modal) {
-					modal.style.display = "none";
+				modal.style.display = "none";
 				}
 			}	
+		
 		</script>
 	
 		<!--CONTENT-->
