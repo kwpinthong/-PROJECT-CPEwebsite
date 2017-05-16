@@ -76,6 +76,6 @@
 				<?php endwhile; ?>
 			</ul>
 		</div>
-
+	</div>
 	</body>
 </html>

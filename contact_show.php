@@ -31,7 +31,7 @@
                     </div>
                 <?php endwhile; ?>
 			</div>
-		</div>
+	</div>
     
 <?php $conn->close(); ?>
 <?php require_once("footer.php"); ?>

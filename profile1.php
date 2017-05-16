@@ -20,7 +20,7 @@
 	<body class="w3-light-grey w3-content" style="max-width:1600px">
 	<!-- Sidebar/menu -->
 	<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-		<h3 class="w3-padding-64 w3-center"><b>STUDENT's<br>Informations</b><br><b>1st Year</b></h3>
+		<h3 class="w3-padding-64 w3-center"><?=$_GET["ID"]?><br>Informations</b></h3>
 		<input class="w3-input w3-border w3-padding" type="text" placeholder="Search for names.." id="myInput" onkeyup="myFunction()"><br>
 		<a href="index.php" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
 		<a href="about.php" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
@@ -55,7 +55,7 @@
 
 	<!-- Top menu on small screens -->
 	<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-		<span class="w3-left w3-padding">STUDENT: 1st Year</span>
+		<span class="w3-left w3-padding"><?=$_GET["ID"]?>:Informations</span>
 		<a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
 	</header>
 
@@ -68,7 +68,23 @@
 		<div class="w3-hide-large" style="margin-top:83px"></div>
 
 	<!--Show Profile-->
-
+	<div class="w3-container w3-content w3-padding-64" style="max-width:650px">
+				<div class="w3-white">
+			<div class="w3-container w3-content w3-padding-64" style="max-width:650px">
+				<h2 class="w3-wide w3-center">Thank You For Leaving A Message</h2>
+				<?php while($row = $result->fetch_assoc()): ?>
+                    
+                        <h2> <?=$row["NName"]?></h2>
+						<h2>   <?=$row["Email"]?></h2>
+						<h2><?=$row["School"]?></h2>
+                  
+                    
+                <?php endwhile; ?>
+					
+			</div>
+		</div>
+			</div>
+	
 
 
 	</div>
